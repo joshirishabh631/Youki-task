@@ -24,7 +24,14 @@ This journal documents the steps taken to set up Youki, a tool that helps run ap
      curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
      ```
    - Follow the instructions on the screen.
-   - Check if Rust is installed by typing:
+3. **Configure your current shell**
+   - Type this command, After configuring the shell, you can run Rust commands directly from the terminal without navigating to the installation directory.
+     
+   ```bash
+     source $HOME/.cargo/env
+     ```
+   
+   - Now, Check if Rust is installed by typing:
      ```bash
      rustc --version
      ```
