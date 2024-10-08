@@ -155,7 +155,8 @@ This journal documents the steps taken to set up Youki, a tool that helps run ap
     ![Output](dockerversion.png)
    
 - **We have to check docker status-**
-  ```bash
+
+   ```bash
   systemctl status docker
   ```
   - systemctl: Command-line tool for managing systemd services, which handle system and service startup.
@@ -167,7 +168,8 @@ This journal documents the steps taken to set up Youki, a tool that helps run ap
     ![Output](dockeroff.png)
 
    **Then run this command for running docker -**
-   ```bash
+
+  ```bash
    systemctl start docker 
    ```
    **And after this docker will be in active mode .**
@@ -253,9 +255,9 @@ This journal documents the steps taken to set up Youki, a tool that helps run ap
 ![Output](json.png) 
 
 **for checking where youki was build type command**
-     ```bash
-         which youki
-      ```
+```bash
+   which youki
+```
 ![Output](which.png) 
 
 3. **Restart Docker:**
@@ -277,15 +279,17 @@ This journal documents the steps taken to set up Youki, a tool that helps run ap
    - This downloads a small version of a program. Type:
 
       ```bash
-     docker pull alpine
-     ```
+         docker pull alpine
+      ```
      **After running this command an Image will be pulled.**
 
 2. **Run a Container Using Youki:**
    - Start a container using the command:
-     ```bash
+
+      ```bash
      docker run --rm -it alpine
      ```
+      
      - docker: Command-line tool for managing Docker containers.
      - run: Tells Docker to create and start a new container.
      - --rm: Automatically removes the container when it exits.
@@ -297,11 +301,14 @@ This journal documents the steps taken to set up Youki, a tool that helps run ap
 ![Output](alpine.png)
 
 **We can see in above image that container is running for verifying it we can use following command**
-    ```bash
-    docker ps
-    ```
-    - docker: This is the command-line interface for interacting with Docker.
-- ps: This stands for "process status." In the context of Docker, it lists the containers that are currently active (running).
+ 
+  ```bash
+     docker ps
+  ```
+   - docker: This is the command-line interface for interacting with Docker.
+   - ps: This stands for "process status." In the context of Docker, it lists the containers that are currently active (running).
+    
+    
   
 ![Output](dockerps.png)
 
