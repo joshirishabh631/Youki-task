@@ -6,8 +6,8 @@
 - [Step 1: Install Rust](#step-1-install-rust)
 - [Step 2: Install Docker](#step-2-install-docker)
 - [Step 3: Build Youki](#step-3-build-youki)
-- [Step 4: Set Up Youki](#step-4-set-up-youki)
-- [Step 5: Run a Container Using Youki](#step-5-run-a-container-using-youki)
+- [Step 4: Setting up Youki as a default runtime](#step-4-setting-up-youki-as-a-default-runtime)
+- [Step 5: Run a Container Using Youki:](#step-5-run-a-container-using-youki)
 - [Step 6: Ensure the Runtime is Youki](#step-6-ensure-the-runtime-is-youki)
 - [Conclusion](#conclusion)
 
