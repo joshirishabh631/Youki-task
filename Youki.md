@@ -7,7 +7,7 @@
 - [Step 2: Install Docker](#step-2-install-docker)
 - [Step 3: Build Youki](#step-3-build-youki)
 - [Step 4: Setting up Youki as a default runtime](#step-4-setting-up-youki-as-a-default-runtime)
-- [Step 5: Run a Container Using Youki](#step-5-run-a-container-using-youki:)
+- [Step 5: Run a Container Using Youki](#step-5-run-a-container-using-youki)
 - [Step 6: Ensure the Runtime is Youki](#step-6-ensure-the-runtime-is-youki)
 - [Conclusion](#conclusion)
 
@@ -283,7 +283,7 @@ This journal documents the steps taken to set up Youki, a tool that helps run ap
       ```
      **After running this command an Image will be pulled.**
 
-2. **Run a Container Using Youki:**
+2. **Run a Container Using Youki**
    - Start a container using the command:
 
       ```bash
