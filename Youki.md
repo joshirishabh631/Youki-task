@@ -25,9 +25,10 @@ This journal documents the steps taken to set up Youki, a tool that helps run ap
      ```
    - Follow the instructions on the screen.
 3. **Configure your current shell**
-   - Type this command, After configuring the shell, you can run Rust commands directly from the terminal without navigating to the installation directory.
+   - Type this command, After configuring the shell, you can run Rust commands directly from the terminal without navigating to the installation 
+      directory.
      
-   ```bash
+     ```bash
      source $HOME/.cargo/env
      ```
    
@@ -67,9 +68,9 @@ This journal documents the steps taken to set up Youki, a tool that helps run ap
    - This step ensures that your system trusts Docker's software.
 
 - **Now checking Docker is installed properly or not**
-```bash
-docker --version
-```
+    ```bash
+    docker --version
+    ```
 
 ---
 ## Step 3: Build Youki
