@@ -47,6 +47,7 @@ This journal documents the steps taken to set up Youki, a tool that helps run ap
 ### Installation Steps for Docker on Ubuntu:
 
 1. **Update the Package List:**
+    - **The command updates the local database of available packages. It fetches the latest information about available software from the repositories defined in your system.**
    - Open the Terminal and type:
      ```bash
      sudo apt-get update
@@ -66,12 +67,31 @@ This journal documents the steps taken to set up Youki, a tool that helps run ap
      curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
      ```
    - This step ensures that your system trusts Docker's software.
+   
+4. **Add Docker’s APT Repository:**
+   -Type this command
+     ```bash
+     sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+     ```
+   - Adding Docker’s APT repository allows your system to find and install the latest version of Docker directly from its official source, ensuring you get the best features and security update.
 
-- **Now checking Docker is installed properly or not**
+5. **Update the Package Index Again:**
+   ```bash
+   sudo apt update
+   ```
+- **We have to enable docker before using it or checking its status-**
+  ```bash
+  systemctl status docker
+  ```
+  If we see the status : active then docker is running properly
+  Else command this to run docker 
+  ```bash
+  systemctl start docker
+  ```
+  - **Now checking Docker is installed properly or not**
     ```bash
     docker --version
     ```
-
 ---
 ## Step 3: Build Youki
 
