@@ -1,6 +1,17 @@
 # Objective
 **To build and Deploy Youki Container Runtime in Linux.**
 
+# Table of Contents
+- [Introduction](#introduction)
+- [Step 1: Install Rust](#step-1-install-rust)
+- [Step 2: Install Docker](#step-2-install-docker)
+- [Step 3: Build Youki](#step-3-build-youki)
+- [Step 4: Set Up Youki](#step-4-set-up-youki)
+- [Step 5: Run a Container Using Youki](#step-5-run-a-container-using-youki)
+- [Step 6: Ensure the Runtime is Youki](#step-6-ensure-the-runtime-is-youki)
+- [Conclusion](#conclusion)
+
+
 ## Introduction
 This journal documents the steps taken to set up Youki, a tool that helps run applications in containers. Containers are like small packages that include everything needed to run a program. We will also install Docker, which helps manage these containers.
 
