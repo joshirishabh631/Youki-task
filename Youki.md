@@ -268,7 +268,7 @@ This journal documents the steps taken to set up Youki, a tool that helps run ap
 **Restarting Docker allows it to recognize and integrate the new container runtime (Youki) properly.**
 ---
 
-## Step 5: Run a comtainer using Youki Runtime
+## Step 5: Run a container using Youki Runtime
 
 ### Task:
 - Run a container using Youki.
