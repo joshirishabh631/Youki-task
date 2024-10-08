@@ -15,7 +15,7 @@ This journal documents the steps taken to set up Youki, a tool that helps run ap
 ---
 ### Machine Info-
 - Machine Model: "HP EliteBook 820 G3"
-- Operating System:"Ubuntu 20.04 LTS"
+- Operating System:"Ubuntu 24.04.1 LTS"
 - Processor:"Intel Core i5"
 
 ### Step 1: Install Rust
