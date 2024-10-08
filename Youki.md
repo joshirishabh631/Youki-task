@@ -18,6 +18,8 @@ This journal documents the steps taken to set up Youki, a tool that helps run ap
 - Operating System:"Ubuntu 24.04.1 LTS"
 - Processor:"Intel Core i5"
 
+--- 
+
 ### Step 1: Install Rust
 
 1. **Open the Terminal:**
