@@ -57,6 +57,7 @@ This journal documents the steps taken to set up Youki, a tool that helps run ap
    ```bash
    sudo apt install cargo
    ```
+   - We installed Cargo while working on the Youki task because Cargo is the package manager and build system for the Rust programming language, which is essential for developing, compiling, and managing Rust projects.
    
 5. **Configure your current shell**
 
