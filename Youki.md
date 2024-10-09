@@ -21,6 +21,7 @@ This journal documents the steps taken to set up Youki, a tool that helps run ap
 - Learn about Youki and all the needed software and tools which are used in the task.
 - Install Rust (the programming language Youki is built with).
 - Install Docker (a tool to manage containers).
+- Using Youki.
 - Setting up Youki as default runtime.
 
 ---
