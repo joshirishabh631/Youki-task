@@ -51,8 +51,14 @@ This journal documents the steps taken to set up Youki, a tool that helps run ap
      - | sh: Pipes the script to the shell for execution.
    
     **Follow the instructions on the screen.**
+
+3. **Install Cargo (package manger for rust):**
+
+   ```bash
+   sudo apt install cargo
+   ```
    
-4. **Configure your current shell**
+5. **Configure your current shell**
 
    - Type this command, After configuring the shell, you can run Rust commands directly from the terminal without navigating to the installation 
       directory.
@@ -238,6 +244,17 @@ This journal documents the steps taken to set up Youki, a tool that helps run ap
    - sudo: Runs the command with superuser (administrator) privileges.
    - vim: A text editor used to edit files in the terminal.
    - /etc/docker/daemon.json: The path to the Docker daemon configuration file, where you can set various options for the Docker service.
+   **If your system do not have VIM text editor , we can either install using
+
+     ```bash
+     sudo apt install vim
+     ```
+     **Or can use**
+
+     ```bash
+     sudo nano /etc/docker/daemon.json
+     ```
+     **Nano is also a text editor which can be used to edit text's.** 
 
 2. **Add Youki as the Default Runtime:**
    - Add this code inside the file:
