@@ -249,7 +249,7 @@ This journal documents the steps taken to set up Youki, a tool that helps run ap
      ```bash
      sudo apt install vim
      ```
-     **Or can use**
+     **Or we can use**
 
      ```bash
      sudo nano /etc/docker/daemon.json
