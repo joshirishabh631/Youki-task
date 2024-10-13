@@ -50,7 +50,7 @@ This journal documents the steps taken to set up Youki, a tool that helps run ap
      - https://sh.rustup.rs: URL to the Rust installation script.
      - | sh: Pipes the script to the shell for execution.
 
-   - **Why -** We are installing Rust language because, Rust provides the tools needed to compile (build) Youki from its source code and make it work properly. 
+**Why -** We are installing Rust language because, Rust provides the tools needed to compile (build) Youki from its source code and make it work properly. 
      
     **Follow the instructions on the screen.**
 
@@ -59,7 +59,7 @@ This journal documents the steps taken to set up Youki, a tool that helps run ap
    ```bash
    sudo apt install cargo
    ```
-   -**Why -** We installed Cargo while working on the Youki task because Cargo is the package manager and build system for the Rust programming language, which is essential for developing, compiling, and managing Rust projects.
+**Why -** We installed Cargo while working on the Youki task because Cargo is the package manager and build system for the Rust programming language, which is essential for developing, compiling, and managing Rust projects.
    
 5. **Configure your current shell**
 
@@ -71,7 +71,7 @@ This journal documents the steps taken to set up Youki, a tool that helps run ap
      - source: Loads the settings from a file into the current shell session.
      - $HOME/.cargo/env: Path to the environment setup file for Rust, located in the .cargo folder in your home directory.
 
-    -**Why -**  After setting up the shell (your command line), you can use Rust commands directly in the terminal without needing to go to the folder where Rust is installed. This makes it easier to run Rust from anywhere on your computer.
+**Why -**  After setting up the shell (your command line), you can use Rust commands directly in the terminal without needing to go to the folder where Rust is installed. This makes it easier to run Rust from anywhere on your computer.
    
     **Now, Check if Rust is installed by typing:**
      ```bash
@@ -103,7 +103,7 @@ This journal documents the steps taken to set up Youki, a tool that helps run ap
    - sudo: Runs the command with administrator privileges.
    - apt-get update: Updates the package index for your system.
 
-    **Why -** The command updates your computer's list of available software. It checks online sources (called repositories) to get the most recent information about what software is available for download and installation.
+**Why -** The command updates your computer's list of available software. It checks online sources (called repositories) to get the most recent information about what software is available for download and installation.
 
 2. **Install Necessary Packages:**
    - Type this command:
@@ -118,7 +118,7 @@ This journal documents the steps taken to set up Youki, a tool that helps run ap
    - curl: Installs the tool for transferring data from or to a server (already mentioned earlier).
    - software-properties-common: Provides tools to manage software repositories easily.
    
-    **Why -** Docker packages give us the basic features and functions to run applications in containers. We need them to make sure Youki can work properly and let us use containers effectively.
+**Why -** Docker packages give us the basic features and functions to run applications in containers. We need them to make sure Youki can work properly and let us use containers effectively.
 
 3. **Add Docker’s Official GPG Key:**
    - Type the following command:
@@ -132,7 +132,7 @@ This journal documents the steps taken to set up Youki, a tool that helps run ap
     - sudo: Runs the command with superuser (administrator) privileges.
    - apt-key add -: Adds the GPG key to APT's trusted keys, allowing your system to verify the authenticity of Docker packages.
    
- **Why -** The GPG key is like a special password that helps our computer verify that the Docker software is genuine and hasn't been changed by anyone. This keeps our system secure.
+**Why -** The GPG key is like a special password that helps our computer verify that the Docker software is genuine and hasn't been changed by anyone. This keeps our system secure.
    
 4. **Add Docker’s APT Repository:**
    -Type this command
@@ -171,15 +171,15 @@ This journal documents the steps taken to set up Youki, a tool that helps run ap
     ```
     ![Output](dockerversion.png)
    
-- **We have to check docker status-**
+**We have to check docker status-**
 
    ```bash
   systemctl status docker
   ```
   - systemctl: Command-line tool for managing systemd services, which handle system and service startup.
 
-    **We see status : active then docker is running properly**
-  ![Output](Dockerstatus.png)
+  **We see status : active then docker is running properly**
+    ![Output](Dockerstatus.png)
 
   **- If we see status : inacitve like this-**
     ![Output](dockeroff.png)
@@ -192,7 +192,7 @@ This journal documents the steps taken to set up Youki, a tool that helps run ap
    **And after this docker will be in active mode .**
    ![Output](Dockerstatus.png)
 
-  **Why -** Checking Docker status tells us if Docker is working. If it’s not running, we can’t use it for our tasks.
+**Why -** Checking Docker status tells us if Docker is working. If it’s not running, we can’t use it for our tasks.
   
 ### Now we have installed docker properly and learned how to start and stop docker as per our work:
 ---
@@ -242,7 +242,7 @@ This journal documents the steps taken to set up Youki, a tool that helps run ap
      - build: The command to compile the project.
      - --release: Flag to optimize the build for release (faster and smaller executable).
        
-   **Why -** We use this command to create the Youki program in a way that makes it run faster and use less memory.
+**Why -** We use this command to create the Youki program in a way that makes it run faster and use less memory.
 
     **After this, you should see an executable file created.**
 ![Output](executable.png)
@@ -263,7 +263,7 @@ This journal documents the steps taken to set up Youki, a tool that helps run ap
    - vim: A text editor used to edit files in the terminal.
    - /etc/docker/daemon.json: The path to the Docker daemon configuration file, where you can set various options for the Docker service.
 
-    **Why -** By changing this file, we're telling Docker to use Youki as its main tool for running containers. This makes it easier for us to use Youki without having to choose it every time.
+**Why -** By changing this file, we're telling Docker to use Youki as its main tool for running containers. This makes it easier for us to use Youki without having to choose it every time.
 
  **Daemon**is a background program that runs on your computer and helps manage tasks without direct user interaction.
  
