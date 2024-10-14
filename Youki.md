@@ -3,8 +3,8 @@
 
 # Table of Contents
 - [Introduction](#introduction)
-- [Step 1: Install Rust](#step-1-install-rust)
-- [Step 2: Install Docker](#step-2-install-docker)
+- [Step 1: Install Docker](#step-2-install-docker)
+- [Step 2: Install Rust](install-rust)
 - [Step 3: Build Youki](#step-3-build-youki)
 - [Step 4: Setting up Youki as a default runtime](#step-4-setting-up-youki-as-a-default-runtime)
 - [Step 5: Run a container using Youki Runtime](#step-5-run-a-container-using-youki-runtime)
@@ -19,8 +19,8 @@ This journal documents the steps taken to set up Youki, a tool that helps run ap
 
 ### Task:
 - Learn about Youki and all the needed software and tools which are used in the task.
-- Install Rust (the programming language Youki is built with).
 - Install Docker (a tool to manage containers).
+- Install Rust (the programming language Youki is built with).
 - Using Youki.
 - Setting up Youki as default runtime.
 
@@ -31,66 +31,7 @@ This journal documents the steps taken to set up Youki, a tool that helps run ap
 - Processor:"Intel Core i5"
 
 --- 
-
-### Step 1: Install Rust
-
-1. **Open the Terminal:**
-   - This is where we type commands for the computer to follow.
-   ![Output](terminal.png)
-
-2. **Install Rust:**
-   - Type this command and press Enter:
-
-      ```bash
-     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-     ```
-
-      - curl: Tool to transfer data from or to a server.
-     - --proto '=https': Only use HTTPS protocol.
-     - --tlsv1.2: Use TLS version 1.2 for security.
-     - -sSf: Options for silent mode, show errors, and fail on server errors.
-     - https://sh.rustup.rs: URL to the Rust installation script.
-     - | sh: Pipes the script to the shell for execution.
-
-**Why -** We are installing Rust language because, Rust provides the tools needed to compile (build) Youki from its source code and make it work properly. 
-     
-**Follow the instructions on the screen.**
-
-4. **Install Cargo (package manger for rust):**
-
-   ```bash
-   sudo apt install cargo
-   ```
-
-**Why -** We installed Cargo while working on the Youki task because Cargo is the package manager and build system for the Rust programming language, which is essential for developing, compiling, and managing Rust projects.
-   
-5. **Configure your current shell**
-
-- Type this command.
-        
-  ```bash
-     source $HOME/.cargo/env
-  ```
- 
-     - source: Loads the settings from a file into the current shell session.
-     - $HOME/.cargo/env: Path to the environment setup file for Rust, located in the .cargo folder in your home directory.
-
-**Why -**  After setting up the shell (your command line), you can use Rust commands directly in the terminal without needing to go to the folder where Rust is installed. This makes it easier to run Rust from anywhere on your computer.
-   
-**Now, Check if Rust is installed by typing:**
-     
-   ```bash
-     rustc --version
-   ```
-- --version: This option tells it to display the version number.
-
-**Why -** To ensure rust is installed in your system.
-
-   **You should see the version number of Rust compiler as shown in image.**
-    ![Output](image.png)
-
----
-## Step 2: Install Docker
+## Step 1: Install Docker
 
 ### What is Docker?
 - Docker is a tool that helps developers create, run, and manage containers. Containers are lightweight, portable units that package an application and everything it needs to run—like libraries, dependencies, and configurations.
@@ -201,6 +142,64 @@ This journal documents the steps taken to set up Youki, a tool that helps run ap
 **Why -** Checking Docker status tells us if Docker is working. If it’s not running, we can’t use it for our tasks.
   
 ### Now we have installed docker properly and learned how to start and stop docker as per our work:
+
+### Step 2: Install Rust
+
+1. **Open the Terminal:**
+   - This is where we type commands for the computer to follow.
+   ![Output](terminal.png)
+
+2. **Install Rust:**
+   - Type this command and press Enter:
+
+      ```bash
+     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+     ```
+
+      - curl: Tool to transfer data from or to a server.
+     - --proto '=https': Only use HTTPS protocol.
+     - --tlsv1.2: Use TLS version 1.2 for security.
+     - -sSf: Options for silent mode, show errors, and fail on server errors.
+     - https://sh.rustup.rs: URL to the Rust installation script.
+     - | sh: Pipes the script to the shell for execution.
+
+**Why -** We are installing Rust language because, Rust provides the tools needed to compile (build) Youki from its source code and make it work properly. 
+     
+**Follow the instructions on the screen.**
+
+4. **Install Cargo (package manger for rust):**
+
+   ```bash
+   sudo apt install cargo
+   ```
+
+**Why -** We installed Cargo while working on the Youki task because Cargo is the package manager and build system for the Rust programming language, which is essential for developing, compiling, and managing Rust projects.
+   
+5. **Configure your current shell**
+
+- Type this command.
+        
+  ```bash
+     source $HOME/.cargo/env
+  ```
+ 
+     - source: Loads the settings from a file into the current shell session.
+     - $HOME/.cargo/env: Path to the environment setup file for Rust, located in the .cargo folder in your home directory.
+
+**Why -**  After setting up the shell (your command line), you can use Rust commands directly in the terminal without needing to go to the folder where Rust is installed. This makes it easier to run Rust from anywhere on your computer.
+   
+**Now, Check if Rust is installed by typing:**
+     
+   ```bash
+     rustc --version
+   ```
+- --version: This option tells it to display the version number.
+
+**Why -** To ensure rust is installed in your system.
+
+   **You should see the version number of Rust compiler as shown in image.**
+    ![Output](image.png)
+
 ---
 ## Step 3: Build Youki
 
