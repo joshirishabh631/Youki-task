@@ -40,6 +40,10 @@ This journal documents the steps taken to set up Youki, a tool that helps run ap
 
 ### Installation Steps for Docker on Ubuntu:
 
+**Open the Terminal:**
+   - This is where we type commands for the computer to follow.
+   ![Output](terminal.png)
+
 1. **Update the Package List:**
     - Run this command.
 
@@ -145,11 +149,7 @@ This journal documents the steps taken to set up Youki, a tool that helps run ap
 
 ### Step 2: Install Rust
 
-1. **Open the Terminal:**
-   - This is where we type commands for the computer to follow.
-   ![Output](terminal.png)
-
-2. **Install Rust:**
+1. **Install Rust:**
    - Type this command and press Enter:
 
       ```bash
@@ -167,7 +167,7 @@ This journal documents the steps taken to set up Youki, a tool that helps run ap
      
 **Follow the instructions on the screen.**
 
-4. **Install Cargo (package manger for rust):**
+2. **Install Cargo (package manger for rust):**
 
    ```bash
    sudo apt install cargo
@@ -175,7 +175,7 @@ This journal documents the steps taken to set up Youki, a tool that helps run ap
 
 **Why -** We installed Cargo while working on the Youki task because Cargo is the package manager and build system for the Rust programming language, which is essential for developing, compiling, and managing Rust projects.
    
-5. **Configure your current shell**
+3. **Configure your current shell**
 
 - Type this command.
         
@@ -294,7 +294,7 @@ This journal documents the steps taken to set up Youki, a tool that helps run ap
 ```
 ![Output](which.png) 
 
-3. **Add Youki as the Default Runtime:**
+2. **Add Youki as the Default Runtime:**
    - Add this code inside the file:
   ```json
       {
