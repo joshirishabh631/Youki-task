@@ -40,10 +40,12 @@ This journal documents the steps taken to set up Youki, a tool that helps run ap
 
 2. **Install Rust:**
    - Type this command and press Enter:
-     ```bash
+
+      ```bash
      curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
      ```
-     - curl: Tool to transfer data from or to a server.
+
+      - curl: Tool to transfer data from or to a server.
      - --proto '=https': Only use HTTPS protocol.
      - --tlsv1.2: Use TLS version 1.2 for security.
      - -sSf: Options for silent mode, show errors, and fail on server errors.
@@ -52,35 +54,39 @@ This journal documents the steps taken to set up Youki, a tool that helps run ap
 
 **Why -** We are installing Rust language because, Rust provides the tools needed to compile (build) Youki from its source code and make it work properly. 
      
-    **Follow the instructions on the screen.**
+**Follow the instructions on the screen.**
 
 4. **Install Cargo (package manger for rust):**
 
    ```bash
    sudo apt install cargo
    ```
+
 **Why -** We installed Cargo while working on the Youki task because Cargo is the package manager and build system for the Rust programming language, which is essential for developing, compiling, and managing Rust projects.
    
 5. **Configure your current shell**
 
-   - Type this command.
-     
-     ```bash
+- Type this command.
+        
+  ```bash
      source $HOME/.cargo/env
-     ```
+  ```
+ 
      - source: Loads the settings from a file into the current shell session.
      - $HOME/.cargo/env: Path to the environment setup file for Rust, located in the .cargo folder in your home directory.
 
 **Why -**  After setting up the shell (your command line), you can use Rust commands directly in the terminal without needing to go to the folder where Rust is installed. This makes it easier to run Rust from anywhere on your computer.
    
-    **Now, Check if Rust is installed by typing:**
-     ```bash
+**Now, Check if Rust is installed by typing:**
+     
+   ```bash
      rustc --version
-     ```
-     - --version: This option tells it to display the version number.
+   ```
+- --version: This option tells it to display the version number.
+
 **Why -** To ensure rust is installed in your system.
 
-     **You should see the version number of Rust compiler as shown in image.**
+   **You should see the version number of Rust compiler as shown in image.**
     ![Output](image.png)
 
 ---
@@ -244,7 +250,7 @@ This journal documents the steps taken to set up Youki, a tool that helps run ap
        
 **Why -** We use this command to create the Youki program in a way that makes it run faster and use less memory.
 
-    **After this, you should see an executable file created.**
+   **After this, you should see an executable file created.**
 ![Output](executable.png)
 ---
 
@@ -265,23 +271,23 @@ This journal documents the steps taken to set up Youki, a tool that helps run ap
 
 **Why -** By changing this file, we're telling Docker to use Youki as its main tool for running containers. This makes it easier for us to use Youki without having to choose it every time.
 
- **Daemon**is a background program that runs on your computer and helps manage tasks without direct user interaction.
+ **Daemon** is a background program that runs on your computer and helps manage tasks without direct user interaction.
  
- **Json**(JavaScript Object Notation file) is a text file that stores data in a structured way using key-value pairs.
+ **Json** (JavaScript Object Notation file) is a text file that stores data in a structured way using key-value pairs.
  
    - For editing through vim text editor firstly press "i" for inserting text and then when you insert the complete mentioned text in daemon.json file press esc key to exit from inserting mode and then press :wq for saving the edited file.
      
-   **If your system do not have VIM text editor , we can either install using
+   **If your system do not have VIM text editor , we can either install using**
 
-     ```bash
+   ```bash
      sudo apt install vim
-     ```
-     **Or we can use**
+   ```
+   **Or we can use**
 
-     ```bash
+   ```bash
      sudo nano /etc/docker/daemon.json
-     ```
-     **Nano is also a text editor which can be used to edit text's.** 
+   ```
+   **Nano is also a text editor which can be used to edit text's.** 
 
 **for checking where youki was build type command**
 ```bash
