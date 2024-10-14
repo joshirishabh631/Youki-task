@@ -115,8 +115,15 @@ This journal documents the steps taken to set up Youki, a tool that helps run ap
    - apt-get: A command-line tool for handling packages in Debian-based systems.
    - install: Installs the specified package.
    - docker-ce: The package name for Docker Community Edition.
-   
-    **Now checking Docker is installed properly or not**
+     
+7. **After installing Docker, if you try to run Docker commands without using sudo, you might see a "permission denied" error. This happens because only users with special permissions (like administrators) can run Docker by default.**
+
+  ```bash
+     sudo usermod -aG docker $USER
+  ```
+- This group gives you the permission to use Docker without being an administrator.
+     
+   **Now checking Docker is installed properly or not**
     ```bash
     docker --version
     ```
