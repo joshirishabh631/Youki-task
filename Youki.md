@@ -109,7 +109,7 @@ This journal documents the steps taken to set up Youki, a tool that helps run ap
 
 6. **Install Docker**
    ```bash
-   sudo apt-get install docker-ce
+   sudo apt install -y docker-ce docker-ce-cli containerd.io
    ```
    - sudo: Runs the command with superuser (administrator) privileges.
    - apt-get: A command-line tool for handling packages in Debian-based systems.
