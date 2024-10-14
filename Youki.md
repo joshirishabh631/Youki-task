@@ -121,7 +121,7 @@ This journal documents the steps taken to set up Youki, a tool that helps run ap
   ```bash
      sudo usermod -aG docker $USER
   ```
-- This group gives you the permission to use Docker without being an administrator.
+- This group gives you the permission to use Docker without being an administrator.($USER = your username).
      
    **Now checking Docker is installed properly or not**
     ```bash
