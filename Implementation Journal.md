@@ -54,7 +54,7 @@ This journal documents the steps taken to set up Youki, a tool that helps run ap
    - sudo: Runs the command with administrator privileges.
    - apt-get update: Updates the package index for your system.
 
-**Why -** The command updates your computer's list of available software. It checks online sources (called repositories) to get the most recent information about what software is available for download and installation.
+**Why -** The command updates my computer's list of available software. It checks online sources (called repositories) to get the most recent information about what software is available for download and installation.
 
 2. **Install Necessary Packages:**
    - Type this command:
