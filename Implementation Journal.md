@@ -8,7 +8,7 @@
 - [Step 3: Setting up Youki as a Default Runtime](#step-3-setting-up-youki-as-a-default-runtime)
 - [Step 4: Run a Container Using Youki Runtime](#step-4-run-a-container-using-youki-runtime)
 - [Step 5: Ensuring that the Image Pulled is Using Youki Runtime](#step-5-ensuring-that-the-image-pulled-is-using-youki-runtime)
-- [Step 6: Checking Default Runtime](#step-6-checking-default-runtime)
+- [Step 6: Checking default runtime](#step-6-checking-default-runtime)
 - [Conclusion](#conclusion)
 
 
@@ -257,7 +257,7 @@ docker ps
 
 ![Output](dockerps.png)
 
-## Step 6: Checking default runtime .
+## Step 6: Checking default runtime.
 
 ```bash
 docker info | grep -i runtime
