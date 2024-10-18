@@ -17,10 +17,7 @@
 This journal documents the steps taken to set up Youki, a tool that helps run applications in containers. Containers are like small packages that include everything needed to run a program. We will also install Docker, which helps manage these containers.
 
 ---
-**Task**
-- To set youki as a default runtime for container.
 
----
 ### Machine Info-
 - Machine Model: "HP EliteBook 820 G3"
 - Operating System:"Ubuntu 24.04.1 LTS"
