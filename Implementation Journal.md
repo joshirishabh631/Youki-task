@@ -17,13 +17,8 @@
 This journal documents the steps taken to set up Youki, a tool that helps run applications in containers. Containers are like small packages that include everything needed to run a program. We will also install Docker, which helps manage these containers.
 
 ---
-
-### Task:
-- Learn about Youki and all the needed software and tools which are used in the task.
-- Install Docker (a tool to manage containers).
-- Install Rust (the programming language Youki is built with).
-- Using Youki.
-- Setting up Youki as default runtime.
+**Task**
+- To set youki as a default runtime for container.
 
 ---
 ### Machine Info-
