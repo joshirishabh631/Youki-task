@@ -7,7 +7,7 @@
 - [Step 2: Build Youki](#step-2-build-youki)
 - [Step 3: Setting up Youki as a Default Runtime](#step-3-setting-up-youki-as-a-default-runtime)
 - [Step 4: Run a Container Using Youki Runtime](#step-4-run-a-container-using-youki-runtime)
-- [Step 5: Ensuring the Pulled Images Use Youki](#step-5-ensuring-the-pulled-images-use-youki)
+- [Step 5: Ensuring that the images which is pulled is using runtime Youki.](#step-5-Ensuring-that-the-images-which-is-pulled-is-using-runtime-Youki.)
 - [Step 6: Checking Default Runtime](#step-6-checking-default-runtime)
 - [Conclusion](#conclusion)
 
