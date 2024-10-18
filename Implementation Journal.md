@@ -3,13 +3,14 @@
 
 # Table of Contents
 - [Introduction](#introduction)
-- [Step 1: Install Docker](#step-1-install-docker)
-- [Step 2: Install Rust](#step-2-install-rust)
-- [Step 3: Build Youki](#step-3-build-youki)
-- [Step 4: Setting up Youki as a default runtime](#step-4-setting-up-youki-as-a-default-runtime)
-- [Step 5: Run a container using Youki Runtime](#step-5-run-a-container-using-youki-runtime)
-- [Step 6: Ensuring that the images which is pulled is using runtime Youki.](#step-6-ensuring-that-the-images-which-is-pulled-is-using-runtime-youki)
+- [Step 1: Install Rust](#step-1-install-rust)
+- [Step 2: Build Youki](#step-2-build-youki)
+- [Step 3: Setting up Youki as a Default Runtime](#step-3-setting-up-youki-as-a-default-runtime)
+- [Step 4: Run a Container Using Youki Runtime](#step-4-run-a-container-using-youki-runtime)
+- [Step 5: Ensuring the Pulled Images Use Youki](#step-5-ensuring-the-pulled-images-use-youki)
+- [Step 6: Checking Default Runtime](#step-6-checking-default-runtime)
 - [Conclusion](#conclusion)
+
 
 
 ## Introduction
@@ -29,132 +30,11 @@ This journal documents the steps taken to set up Youki, a tool that helps run ap
 - Machine Model: "HP EliteBook 820 G3"
 - Operating System:"Ubuntu 24.04.1 LTS"
 - Processor:"Intel Core i5"
+- We have Docker installed in our system.
 
---- 
-## Step 1: Install Docker
+---
 
-### What is Docker?
-- Docker is a tool that helps developers create, run, and manage containers. Containers are lightweight, portable units that package an application and everything it needs to run—like libraries, dependencies, and configurations.
-
-**Why -** We install Docker for the Youki task because Docker helps us run and test containers. Since Youki is used to manage containers, Docker makes it easy for us to check if Youki is working properly.
-
-### Installation Steps for Docker on Ubuntu:
-
-**Open the Terminal:**
-   - This is where we type commands for the computer to follow.
-   ![Output](terminal.png)
-
-1. **Update the Package List:**
-    - Run this command.
-
-   - Open the Terminal and type:
-     ```bash
-     sudo apt-get update
-     ```
-   - sudo: Runs the command with administrator privileges.
-   - apt-get update: Updates the package index for your system.
-
-**Why -** The command updates my computer's list of available software. It checks online sources (called repositories) to get the most recent information about what software is available for download and installation.
-
-2. **Install Necessary Packages:**
-   - Type this command:
-     ```bash
-     sudo apt-get install apt-transport-https ca-certificates curl software-properties-common
-     ```
-   - sudo: Runs the command with superuser (administrator) privileges.
-   - apt-get: A command-line tool for handling packages in Debian-based systems.
-   - install: Installs the specified packages.
-   - apt-transport-https: Allows APT to use HTTPS for secure package downloads.
-   - ca-certificates: Installs certificates to verify the authenticity of SSL connections.
-   - curl: Installs the tool for transferring data from or to a server (already mentioned earlier).
-   - software-properties-common: Provides tools to manage software repositories easily.
-   
-**Why -** Docker packages give us the basic features and functions to run applications in containers. We need them to make sure Youki can work properly and let us use containers effectively.
-
-3. **Add Docker’s Official GPG Key:**
-   - Type the following command:
-     ```bash
-     curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-     ```
-    - curl: Tool to transfer data from or to a server.
-    - -fsSL: Options for fail silently, show errors, and follow redirects.
-    - https://download.docker.com/linux/ubuntu/gpg: URL where the Docker GPG key is located.
-    - |: Pipes the output of the previous command into the next command.
-    - sudo: Runs the command with superuser (administrator) privileges.
-   - apt-key add -: Adds the GPG key to APT's trusted keys, allowing your system to verify the authenticity of Docker packages.
-   
-**Why -** The GPG key is like a special password that helps our computer verify that the Docker software is genuine and hasn't been changed by anyone. This keeps our system secure.
-   
-4. **Add Docker’s APT Repository:**
-   -Type this command
-     ```bash
-     sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
-     ```
-- sudo: Runs the command with superuser (administrator) privileges.
-- add-apt-repository: A command to add a new software repository to APT.
-- "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable":
-- deb: Indicates that this is a Debian package repository.
-- [arch=amd64]: Specifies that the packages are for 64-bit systems.
-- https://download.docker.com/linux/ubuntu: The URL for the Docker repository.
-- $(lsb_release -cs): This command gets the code name of your Ubuntu version (like focal for 20.04).
-
-**Why -** APT repositories are like online stores for software. By adding them, we can easily download and install Docker and make sure we always get the latest version. This helps our system run Docker properly and securely.
-
- **Adding Docker’s APT repository allows your system to find and install the latest version of Docker directly from its official source, ensuring you get the best features and security update.**
-
-5. **Update the Package Index Again:**
-   ```bash
-   sudo apt update
-   ```
-
-6. **Install Docker**
-   ```bash
-   sudo apt install -y docker-ce docker-ce-cli containerd.io
-   ```
-   - sudo: Runs the command with superuser (administrator) privileges.
-   - apt-get: A command-line tool for handling packages in Debian-based systems.
-   - install: Installs the specified package.
-   - docker-ce: The package name for Docker Community Edition.
-     
-7. **After installing Docker, if you try to run Docker commands without using sudo, you might see a "permission denied" error. This happens because only users with special permissions (like administrators) can run Docker by default.**
-
-  ```bash
-     sudo usermod -aG docker $USER
-  ```
-- This group gives you the permission to use Docker without being an administrator.($USER = your username).
-     
-   **Now checking Docker is installed properly or not**
-    ```bash
-    docker --version
-    ```
-    ![Output](dockerversion.png)
-   
-**We have to check docker status-**
-
-   ```bash
-  systemctl status docker
-  ```
-  - systemctl: Command-line tool for managing systemd services, which handle system and service startup.
-
-  **We see status : active then docker is running properly**
-    ![Output](Dockerstatus.png)
-
-  **- If we see status : inacitve like this-**
-    ![Output](dockeroff.png)
-
-   **Then run this command for running docker -**
-
-  ```bash
-   systemctl start docker 
-   ```
-   **And after this docker will be in active mode .**
-   ![Output](Dockerstatus.png)
-
-**Why -** Checking Docker status tells us if Docker is working. If it’s not running, we can’t use it for our tasks.
-  
-### Now we have installed docker properly and learned how to start and stop docker as per our work:
-
-### Step 2: Install Rust
+### Step 1: Install Rust
 
 1. **Install Rust:**
    - Type this command and press Enter:
@@ -208,7 +88,7 @@ This journal documents the steps taken to set up Youki, a tool that helps run ap
     ![Output](image.png)
 
 ---
-## Step 3: Build Youki
+## Step 2: Build Youki
 
 ### Task:
 - Now, we will build Youki from its source code.
@@ -256,11 +136,12 @@ This journal documents the steps taken to set up Youki, a tool that helps run ap
        
 **Why -** We use this command to create the Youki program in a way that makes it run faster and use less memory.
 
-   **After this, you should see an executable file created.**
-![Output](executable.png)
+ **After this, you can list the contents of this youki directory by running ls command on terminal**
+   
+   ![Output](executable.png)
 ---
 
-## Step 4: Setting up Youki as a default runtime
+## Step 3: Setting up Youki as a default runtime
 ### Task:
 - Configure Docker to use Youki by default.
 
@@ -283,17 +164,6 @@ This journal documents the steps taken to set up Youki, a tool that helps run ap
  
    - For editing through vim text editor firstly press "i" for inserting text and then when you insert the complete mentioned text in daemon.json file press esc key to exit from inserting mode and then press :wq for saving the edited file.
      
-   **If your system do not have VIM text editor , we can either install using**
-
-   ```bash
-     sudo apt install vim
-   ```
-   **Or we can use**
-
-   ```bash
-     sudo nano /etc/docker/daemon.json
-   ```
-   **Nano is also a text editor which can be used to edit text's.** 
 
 **for checking where youki was build type command**
 ```bash
@@ -315,8 +185,6 @@ This journal documents the steps taken to set up Youki, a tool that helps run ap
  ```
    - Replace `/path/to/youki` with the actual path where Youki was built.
 
-![Output](json.png) 
-
 3. **Restart Docker:**
    - Type this command:
      ```bash
@@ -325,7 +193,7 @@ This journal documents the steps taken to set up Youki, a tool that helps run ap
 **When we restart Docker, it refreshes everything and learns to use Youki to manage containers.**
 ---
 
-## Step 5: Run a container using Youki Runtime
+## Step 4: Run a container using Youki Runtime
 
 ### Task:
 - Run a container using Youki.
@@ -339,7 +207,7 @@ This journal documents the steps taken to set up Youki, a tool that helps run ap
          docker pull alpine
       ```
      **After running this command an Image will be pulled.**
-**Why -** We pull an image to download a pre-built container image from a repository (like Docker Hub) to our computer. This image contains all the necessary files and settings needed to run an application inside a container.
+**Why -** We pull an image from a repository (like Docker Hub) to our computer. This image contains all the necessary files and settings needed to run an application inside a container.
 
 2. **Run a Container Using Youki**
    - Start a container using the command:
@@ -372,7 +240,7 @@ This journal documents the steps taken to set up Youki, a tool that helps run ap
 
 ---
 
-## Step 6: Ensuring that the images which is pulled is using runtime Youki.
+## Step 5: Ensuring that the images which is pulled is using runtime Youki.
 
 ```bash
 docker inspect CONTAINER_ID | grep -i "runtime"
@@ -389,7 +257,7 @@ docker ps
 
 ![Output](dockerps.png)
 
-## Step 7: Checking default runtime .
+## Step 6: Checking default runtime .
 
 ```bash
 docker info | grep -i runtime
@@ -406,7 +274,7 @@ docker info | grep -i runtime
 ## 
 
 ## Conclusion
-In this journal, I successfully installed Youki and configured it as the default runtime for Docker. This process involved several key steps, including installing Rust and Docker, building Youki from source, and setting up Docker to recognize Youki as its primary runtime.
+In this journal, I successfully installed Youki and configured it as the default runtime for Docker. This process involved several key steps, including installing Rust, building Youki from source, and setting up Docker to recognize Youki as its primary runtime.
 
 
 
