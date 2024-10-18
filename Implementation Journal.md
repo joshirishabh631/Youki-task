@@ -193,7 +193,7 @@ This journal documents the steps taken to set up Youki, a tool that helps run ap
 ### Steps to Pull and Run a Container:
 
 1. **Pull an Image from Docker Hub:**
-   - This downloads a small version of a program. Type:
+   - This downloads a image of a program. Type:
 
       ```bash
          docker pull alpine
