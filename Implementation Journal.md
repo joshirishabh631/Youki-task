@@ -175,7 +175,7 @@ This journal documents the steps taken to set up Youki, a tool that helps run ap
       }
 }
  ```
-   - Replace `/path/to/youki` with the actual path where Youki was built.
+
 
 3. **Restart Docker:**
    - Type this command:
