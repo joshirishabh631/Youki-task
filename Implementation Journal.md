@@ -140,7 +140,7 @@ This journal documents the steps taken to set up Youki, a tool that helps run ap
 ### Steps to Set Youki as Default:
 
 1. **Edit Docker's Configuration File:**
-   - Run this command to pen the file for editing:
+   - Run this command to open the file for editing:
      ```bash
      sudo vim /etc/docker/daemon.json
      ```
