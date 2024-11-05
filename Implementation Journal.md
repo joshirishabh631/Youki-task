@@ -46,7 +46,7 @@ This journal documents the steps taken to set up Youki, a tool that helps run ap
      
 **Follow the instructions on the screen.**
 
-2. **Install Cargo (package manger for rust):**
+2. **Install Cargo (package manager for rust):**
 
    ```bash
    sudo apt install cargo
