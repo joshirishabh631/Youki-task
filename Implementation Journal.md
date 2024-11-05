@@ -96,9 +96,9 @@ This journal documents the steps taken to set up Youki, a tool that helps run ap
 - sudo: Runs the command with superuser (administrator) privileges.
 - apt-get: A command-line tool for handling packages in Debian-based systems.
 - install: Installs the specified packages.
-- libseccomp-dev: Development files for the libseccomp library, used for filtering system calls.
-- pkg-config: Tool to manage compile and link flags for libraries.
-- build-essential: A package that includes essential tools for building software (like compilers).
+- libseccomp-dev: This is a library that helps in applying security rules to control what actions programs can take. 
+- pkg-config: This tool helps your system find other libraries that Youki needs to work properly..
+- build-essential: This package provides basic development tools like compilers, which are needed to build (compile) Youki from its source code.
 
 **Why -** Dependencies are like helpers that make sure Youki has everything it needs to function well. Without them, Youki might not work correctly or could have problems.
 
