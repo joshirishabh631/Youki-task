@@ -17,8 +17,7 @@
 This journal documents the steps taken to set up Youki, a tool that helps run applications in containers. Containers are like small packages that include everything needed to run a program. We will also need Docker, which helps manage these containers.
 
 ---
-## Why we have used youki-:
-
+## Why we use Youki Runtime-:
 - We use Youki over runc because Youki is designed to start containers faster and has a simpler, more efficient architecture. It also provides better performance and easier integration with modern container runtimes.
 
 ---
