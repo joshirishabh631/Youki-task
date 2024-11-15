@@ -18,10 +18,10 @@ This journal documents the steps taken to set up Youki, a tool that helps run ap
 
 ---
 ## Why we use Youki Runtime-:
-1. **Lightweight:** It uses fewer resources, making it efficient for running containers with minimal overhead.
-2. **Fast Performance:** Youki offers fast container start-up times, improving efficiency.
-3. **Compatibility:** Works well with tools like Podman for easy container management.
-4. **Simple and Efficient:** It’s designed to be simple and optimized, making it ideal for environments where performance and resource usage are critical.
+1. **Lightweight:** Youki is small and doesn’t need much memory, making it fast and efficient.
+2. **Faster Performance:** Since Youki uses fewer resources, it runs containers faster compared to other runtimes.
+3. **Compatibility:** Youki works with Docker and Kubernetes, so you can use it with common container tools.
+4. **Simple to Set Up:** It’s easy to install and get running, saving time on setup.
 ---
 
 ### Machine Info-
@@ -269,6 +269,18 @@ docker info | grep -i runtime
 **Why -** We have to verify which is our default runtime.
 
 ---
+**Lets now verify which runtime is faster in starting container**
+
+- Run this command on terminal to check start time of **youki** runtime.
+```bash
+time docker run --runtime=youki --rm alpine
+```
+
+- Run this command on terminal to check start time of **runc** runtime.
+```bash
+time docker run --runtime=runc --rm alpine
+```
+![Output](youkitime.png)
 ## 
 
 ## Conclusion
