@@ -18,8 +18,10 @@ This journal documents the steps taken to set up Youki, a tool that helps run ap
 
 ---
 ## Why we use Youki Runtime-:
-- We use Youki over runc because Youki is designed to start containers faster and has a simpler, more efficient architecture. It also provides better performance and easier integration with modern container runtimes.
-
+1. **Lightweight:** It uses fewer resources, making it efficient for running containers with minimal overhead.
+2. **Fast Performance:** Youki offers fast container start-up times, improving efficiency.
+3. **Compatibility:** Works well with tools like Podman for easy container management.
+4. **Simple and Efficient:** It’s designed to be simple and optimized, making it ideal for environments where performance and resource usage are critical.
 ---
 
 ### Machine Info-
