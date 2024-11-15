@@ -281,7 +281,14 @@ time docker run --runtime=youki --rm alpine
 time docker run --runtime=runc --rm alpine
 ```
 ![Output](youkitime.png)
-## 
+
+## How does this works -:
+**After the command finishes, time outputs the time data in three parts:**
+- **real:** The total time from when the command started until it finished (wall-clock time).
+- **user:** The total CPU time spent in user mode by the process (i.e., performing tasks like executing the container code).
+- **sys:** The total CPU time spent in system/kernel mode (i.e., performing system-related tasks like managing system calls or accessing hardware).
+
+- The user and sys times are also useful to understand how much CPU time is spent in the user space and the kernel space, but real time is the most important indicator of runtime performance.So,we can conclude from here that **Youki** starts container faster than **Runc.**
 
 ## Conclusion
 In this journal, I successfully installed Youki and configured it as the default runtime for Docker. This process involved several key steps, including installing Rust, building Youki from source, and setting up Docker to recognize Youki as its primary runtime.
