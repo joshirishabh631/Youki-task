@@ -275,14 +275,20 @@ docker info | grep -i runtime
 ```bash
 time docker run --runtime=youki --rm alpine
 ```
+- Here is the output in which we can check real time usage for running container using Youki runtime.
+
+![Output](./images/runtimey.png)
 
 - Run this command on terminal to check start time of **runc** runtime.
 ```bash
 time docker run --runtime=runc --rm alpine
 ```
-![Output](./images/youkitime.png)
+- Here is the output in which we can check real time usage for running container using Runc runtime.
+
+![Output](./images/runtimec.png)
 
 ## How does this works -:
+
 **After the command finishes, time outputs the time data in three parts:**
 - **real:** The total time from when the command started until it finished (wall-clock time).
 - **user:** The total CPU time spent in user mode by the process (i.e., performing tasks like executing the container code).
