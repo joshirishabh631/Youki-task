@@ -1,5 +1,5 @@
 # Youki Task - Container Runtime Implementation
-![Youki Logo]()
+![Youki Logo](./images/youki.png)
 ## Overview
 In this project, I installed and used the **Youki** container runtime on my **HP EliteBook 820 G3** laptop. The main goal was to explore Youki as an alternative to Docker, and learn about container runtimes.
 
