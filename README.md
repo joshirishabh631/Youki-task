@@ -1,5 +1,5 @@
 # Youki Task - Container Runtime Implementation
-![Youki Logo](https://www.google.com/search?sca_esv=7cffce009da9068a&sxsrf=ADLYWIL1nL4_OSBzsHLQFhnrVGK_TwPv0A:1731919544944&q=youki+runtime+logo&udm=2&fbs=AEQNm0A633aOWMcGwo5EkodWqZWQxPIwflRJ4Hu3ORx2YNN2hMyLXvg7YutBzzEkH5jrqRZVNqsK5Bw5ddbAfF-taybgSSQV7ogjWSUk63vkbvL-w-2sTerjJ7a1qtv8zFo28s-nc22keo6muysMGbl8BCfSSXh3FGk1ZY3eeYssKJviJNVvetGnAw9RLPW_1hjO4UjKh9TyvNHuCY5y8W_08ktHQZ8ciA&sa=X&ved=2ahUKEwiv4YWKv-WJAxXmlK8BHTErEXkQtKgLegQIEhAB&biw=1236&bih=629&dpr=1.5#vhid=63sv_nqqxkV5aM&vssid=mosaic)
+![Youki Logo]()
 ## Overview
 In this project, I installed and used the **Youki** container runtime on my **HP EliteBook 820 G3** laptop. The main goal was to explore Youki as an alternative to Docker, and learn about container runtimes.
 
