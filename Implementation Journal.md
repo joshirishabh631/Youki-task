@@ -83,7 +83,7 @@ This journal documents the steps taken to set up Youki, a tool that helps run ap
 **Why -** To ensure rust is installed in your system.
 
    **You should see the version number of Rust compiler as shown in image.**
-    ![Output](image.png)
+    ![Output](./images/image.png)
 
 ---
 ## Step 2: Build Youki
@@ -136,7 +136,7 @@ This journal documents the steps taken to set up Youki, a tool that helps run ap
 
  **After this, you can list the contents of this youki directory by running ls command on terminal**
    
-   ![Output](executable.png)
+   ![Output](./images/executable.png)
 ---
 
 ## Step 3: Setting up Youki as a default runtime
@@ -167,7 +167,7 @@ This journal documents the steps taken to set up Youki, a tool that helps run ap
 ```bash
    which youki
 ```
-![Output](which.png) 
+![Output](./images/which.png) 
 
 2. **Add Youki as the Default Runtime:**
    - Add this code inside the file:
@@ -222,7 +222,7 @@ This journal documents the steps taken to set up Youki, a tool that helps run ap
      - -t: Allocates a pseudo-TTY (terminal).
      - alpine: The name of the Docker image to use, which is a lightweight Linux distribution.
 
-![Output](alpine.png)
+![Output](./images/alpine.png)
 
 **We can see in above image that container is running for verifying it we can Run following command**
  
@@ -232,7 +232,7 @@ This journal documents the steps taken to set up Youki, a tool that helps run ap
    - docker: This is the command-line interface for interacting with Docker.
    - ps: This stands for "process status." In the context of Docker, it lists the containers that are currently active (running).
   
-![Output](dockerps.png)
+![Output](./images/dockerps.png)
 
 **Why -** For verifying running container .
 
@@ -244,7 +244,7 @@ This journal documents the steps taken to set up Youki, a tool that helps run ap
 docker inspect CONTAINER_ID | grep -i "runtime"
 
 ```
-![Output](infodocker.png)
+![Output](./images/infodocker.png)
 
 **Why -** We use the command to check what container runtime is being used for a specific container.
 
@@ -253,7 +253,7 @@ docker inspect CONTAINER_ID | grep -i "runtime"
 docker ps
 ```
 
-![Output](dockerps.png)
+![Output](./images/dockerps.png)
 
 ## Step 6: Checking default runtime.
 
@@ -264,7 +264,7 @@ docker info | grep -i runtime
 - |: Sends the output to the next command.
 - grep -i runtime: Looks for lines that mention "runtime" (case insensitive).
 
-![Output](default.png)
+![Output](./images/default.png)
 
 **Why -** We have to verify which is our default runtime.
 
@@ -280,7 +280,7 @@ time docker run --runtime=youki --rm alpine
 ```bash
 time docker run --runtime=runc --rm alpine
 ```
-![Output](youkitime.png)
+![Output](./images/youkitime.png)
 
 ## How does this works -:
 **After the command finishes, time outputs the time data in three parts:**
