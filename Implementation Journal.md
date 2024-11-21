@@ -272,12 +272,13 @@ docker info | grep -i runtime
 **Lets now verify which runtime is faster in starting container**
 
 - Run this command on terminal to check start time of **youki** runtime.
+IMP**
 ```bash
 time docker run --runtime=youki --rm alpine
 ```
 - Here is the output in which we can check real time usage for running container using Youki runtime.
 
-![Output](./images/runtimey.png)
+![Output](./images/youki1.png)
 
 - Run this command on terminal to check start time of **runc** runtime.
 ```bash
@@ -285,7 +286,7 @@ time docker run --runtime=runc --rm alpine
 ```
 - Here is the output in which we can check real time usage for running container using Runc runtime.
 
-![Output](./images/runtimec.png)
+![Output](./images/runc.png)
 
 ## How does this works -:
 
