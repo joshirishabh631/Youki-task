@@ -272,7 +272,7 @@ docker info | grep -i runtime
 **Lets now verify which runtime is faster in starting container**
 
 - Run this command on terminal to check start time of **youki** runtime.
-IMP**
+
 ```bash
 time docker run --runtime=youki --rm alpine
 ```
